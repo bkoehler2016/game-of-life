@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
-export const Grid = () => {
-    return (
-        <div>
-            <h1>Hello from grid</h1>
-        </div>
-    )
-}
-export default Grid
+const Grid = props => {
+  
+    const { draw, ...rest } = props
+    const canvasRef = useRef(null)
+    
+    useEffect(() => {
+      
+      const canvas = canvasRef.current
+      const context = canvas.getContext('2d')
+      let frameCount = 0
+      let animationFrameId
+      
+      const render = () => {
+        frameCount++
+        draw(context, frameCount)
+        animationFrameId = window.requestAnimationFrame(render)
+      }
+      render()
+      
+      return () => {
+        window.cancelAnimationFrame(animationFrameId)
+      }
+    }, [draw])
+    
+    return <canvas ref={canvasRef} {...rest}/>
+  }
+  
+  export default Grid
