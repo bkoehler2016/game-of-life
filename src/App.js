@@ -51,7 +51,7 @@ function App() {
             <Button color="warning" onClick={newGame}>Start New</Button>
           </div>
           <div className="interval">
-          <label>Interval Steps<Slider speed={gameStatus.speed} onSpeedChange={changeSpeed}/>{gameStatus.speed}ms
+          <label>Interval Steps: <Slider speed={gameStatus.speed} onSpeedChange={changeSpeed}/>{gameStatus.speed}ms
           </label>
           </div>
           <div className="gen">Generation: {gameStatus.generation}</div>

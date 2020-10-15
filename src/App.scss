@@ -5,11 +5,13 @@
       box-sizing: border-box;
       border-radius: 5px;
     }
+    margin: auto;
     text-align: center;
     display: flexbox ;
     align-content: center;
     flex-wrap: wrap;
-    font-family: 'Droid Serif';  
+    font-family: 'Droid Serif'; 
+    background: #000; 
   }
   .matrix {
     width: 100%;
@@ -33,10 +35,10 @@
     border-radius: 5px;
   }
   .dead {
-  background: #020202;
+  background: #FFFFFF;
   }
   .stageOne {
-    background: #b3a7ec;
+    background: #300fd8;
   }
   .stageTwo {
     background: #b3a7ec;
@@ -52,9 +54,9 @@
   }
 
 
-  .buttons .btn{
+  .buttons{
     
-    background-color: #121212;
+    background-color: #000;
     display:flexbox;
     justify-content: center;
     padding:1em 1.2em;
@@ -69,16 +71,19 @@
     transition: all 0.2s;
     margin-bottom: 20px;
   }
+  .btn{
+    margin: 10px;
+  }
   
   .interval {
-    display:flexbox;
+  display:flexbox;
   justify-content: center;
   border-radius: 5px;
   box-sizing: border-box;
   text-decoration:none;
   font-family:'Roboto',sans-serif;
   font-weight:500;
-  color:#020202;
+  color:#FFFFFF;
   text-align:center;
   transition: all 0.2s;
   margin-bottom: 15px;
@@ -88,7 +93,7 @@
   .rules {
     width: 90%;
     margin : 2rem;
-    color: #0e2a3a;
+    color: #ffffff;
     h1 {
       
       font-size: 2rem;
@@ -123,5 +128,4 @@
       
           }
         }
-    }
-}
+    }}
