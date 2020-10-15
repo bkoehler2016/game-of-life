@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+.App {
+    * {
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    text-align: center;
+    display: flexbox ;
+    align-content: center;
+    flex-wrap: wrap;
+    font-family: 'Droid Serif';  
+  }
+  .buttons .btn{
+    
+    background-color: #121212;
+    display:flexbox;
+    justify-content: center;
+    padding:1em 1.2em;
+    border:0.1em solid #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:900;
+    color:#f5f4f8;
+    text-align:center;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+  }
+  .rules {
+    width: 90%;
+    margin : 2rem;
+    color: #0e2a3a;
+    h1 {
+      
+      font-size: 2rem;
+    }
+    ul{
+      list-style: none;
+    }
+    li {
+      font-size: 1.2rem;
+      margin-bottom: 5%;
+      background: #2a9d9031;
+      border-radius: 10px;
+      padding: 2%;
+    }
+  }
