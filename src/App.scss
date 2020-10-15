@@ -11,6 +11,47 @@
     flex-wrap: wrap;
     font-family: 'Droid Serif';  
   }
+  .matrix {
+    width: 100%;
+    background: rgb(20, 19, 19);
+    margin: auto;
+    margin-top: 2%;
+  }
+  
+  .board {
+    height: 90vh;
+    width: 90vh;
+    margin: auto;
+  }   
+  .row{
+    height: 3%;
+    display: flex;
+  }
+  .cell {
+    width: 3%;
+    margin: 0.5%;
+    border-radius: 5px;
+  }
+  .dead {
+  background: #020202;
+  }
+  .stageOne {
+    background: #b3a7ec;
+  }
+  .stageTwo {
+    background: #b3a7ec;
+  }
+  .stageThree {
+    background: #b3a7ec;
+  }
+  .stageFour {
+    background: #b3a7ec;
+  }
+  .stageFive {
+    background: #b3a7ec
+  }
+
+
   .buttons .btn{
     
     background-color: #121212;
@@ -28,6 +69,22 @@
     transition: all 0.2s;
     margin-bottom: 20px;
   }
+  
+  .interval {
+    display:flexbox;
+  justify-content: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:500;
+  color:#020202;
+  text-align:center;
+  transition: all 0.2s;
+  margin-bottom: 15px;
+
+}
+
   .rules {
     width: 90%;
     margin : 2rem;
@@ -46,4 +103,25 @@
       border-radius: 10px;
       padding: 2%;
     }
-  }
+
+    footer {
+        color: #0e2a3a;
+        width: 100%;
+        margin: 2% 1.25%;
+        
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+          li {
+            border: 2px solid #0e2a3a;
+            padding: .5% 1%;
+          }
+          a {
+            text-decoration: none;
+            color:#0e2a3a;
+      
+          }
+        }
+    }
+}
