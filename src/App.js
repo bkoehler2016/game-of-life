@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-import './App.scss'
-import {Button} from 'reactstrap';
+import './App.scss';
 import useInterval from './hooks/useInterval'
 import Slider from './components/slider/Slider'
 import BoardGrid from './components/board/Board'
 import newBoardStatus from './builds/newBoardStatus'
-import runGame from './builds/newBoardStatus'
-
+import runGame from './builds/runGame'
 
 
 const size = 25
@@ -46,12 +44,12 @@ function App() {
   return (
     <div className="App">
           <div className="buttons">
-            <Button color="primary" onClick={toggleRun}>{gameStatus.isGameRunning?'Pause':'Start'}</Button>
-            <Button color="danger" onClick={clearBoard}>Clear</Button>
-            <Button color="warning" onClick={newGame}>Start New</Button>
+            <button onClick={toggleRun}>{gameStatus.isGameRunning?'Pause':'Start'}</button>
+            <button onClick={clearBoard}>Clear</button>
+            <button onClick={newGame}>Start New</button>
           </div>
           <div className="interval">
-          <label>Interval Steps: <Slider speed={gameStatus.speed} onSpeedChange={changeSpeed}/>{gameStatus.speed}ms
+          <label>Interval Steps<Slider speed={gameStatus.speed} onSpeedChange={changeSpeed}/>{gameStatus.speed}ms
           </label>
           </div>
           <div className="gen">Generation: {gameStatus.generation}</div>
