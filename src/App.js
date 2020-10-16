@@ -5,6 +5,7 @@ import Slider from './components/slider/Slider'
 import BoardGrid from './components/board/Board'
 import newBoardStatus from './builds/newBoardStatus'
 import runGame from './builds/runGame'
+import {Button} from 'reactstrap'
 
 
 const size = 25
@@ -44,9 +45,9 @@ function App() {
   return (
     <div className="App">
           <div className="buttons">
-            <button onClick={toggleRun}>{gameStatus.isGameRunning?'Pause':'Start'}</button>
-            <button onClick={clearBoard}>Clear</button>
-            <button onClick={newGame}>Start New</button>
+            <Button color="primary" onClick={toggleRun}>{gameStatus.isGameRunning?'Pause':'Start'}</Button>
+            <Button color="danger" onClick={clearBoard}>Clear</Button>
+            <Button color="warning" onClick={newGame}>Start New</Button>
           </div>
           <div className="interval">
           <label>Interval Steps<Slider speed={gameStatus.speed} onSpeedChange={changeSpeed}/>{gameStatus.speed}ms
