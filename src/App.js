@@ -6,6 +6,7 @@ import BoardGrid from './components/board/Board'
 import newBoardStatus from './builds/newBoardStatus'
 import runGame from './builds/runGame'
 import {Button} from 'reactstrap'
+import Music from './components/music/Music';
 
 
 const size = 25
@@ -54,7 +55,7 @@ function App() {
           </label>
           </div>
           <div className="gen">Generation: {gameStatus.generation}</div>
-        
+        <Music />
         <BoardGrid gameStatus={gameStatus} setGameStatus={setGameStatus} size={size}/>
       <section className='rules'>
         <h1><a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life' target='_blank' rel="noopener noreferrer">
