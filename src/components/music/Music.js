@@ -4,7 +4,8 @@ import lifeMusic from './life.mp3';
 
 const Music = () => {
     const [play, { stop }] = useSound(lifeMusic, {
-        interrupt: true
+        interrupt: true,
+        loop: true
     });
     
     const handleClick = () => {
